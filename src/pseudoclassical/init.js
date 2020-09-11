@@ -16,9 +16,16 @@ function handleClickDancerButton() {
     document.body.clientWidth * Math.random(),
     Math.random() * 1000
   );
-
   document.body.appendChild(dancer.$node);
 }
+
+// make a dancer with a random position
+// let dancer = makeBlinkyDancer(
+//   document.body.clientHeight * Math.random(),
+//   document.body.clientWidth * Math.random(),
+//   Math.random() * 1000
+// );
+// document.body.appendChild(dancer.$node);
 
 window.addEventListener("DOMContentLoaded", () => {
   const elAddDancerButton = document.querySelector(".addDancerButton");
