@@ -9,15 +9,18 @@ if (typeof window === "undefined") {
 class DancerClass {
   // your code here
   constructor(top, left, time) {
-    const createDancerElement = function () {
-      let elDancer = document.createElement("span");
-      elDancer.className = "dancer";
-      return elDancer;
-    };
+    // const createDancerElement = function () {
+    //   let elDancer = document.createElement("span");
+    //   elDancer.className = "dancer";
+    //   return elDancer;
+    // };
     this.time = time;
-    this.$node = createDancerElement();
+    this.$node = this.createDancerElement();
+    this.$node1 = this.createDancerElement1();
     this.step();
+    this.step1();
     this.setPosition(top, left);
+    this.setPosition1(top, left);
   }
 
   createDancerElement() {
@@ -26,12 +29,28 @@ class DancerClass {
     return elDancer;
   }
 
+  createDancerElement1() {
+    let newDancer = document.createElement("span");
+    newDancer.className = "newdancer";
+    return newDancer;
+  }
+
   step() {
     setTimeout(this.step.bind(this), this.time);
   }
 
+  step1() {
+    setTimeout(this.step1.bind(this), this.time);
+  }
+
   setPosition(top, left) {
     Object.assign(this.$node.style, {
+      top: `${top}px`,
+      left: `${left}px`,
+    });
+  }
+  setPosition1(top, left) {
+    Object.assign(this.$node1.style, {
       top: `${top}px`,
       left: `${left}px`,
     });

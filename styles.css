@@ -4,8 +4,7 @@ html {
 }
 body {
   margin: 0px;
-  background-color: #444;
-  /* background-image: url("https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.nba.com%2Fscores&psig=AOvVaw0LZTheYbRH7lXRE0WfNYXl&ust=1599789549703000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPju69K-3esCFQAAAAAdAAAAABBd"); */
+  background: grey;
   font-size: 18px;
 }
 body,
@@ -27,7 +26,18 @@ a:active {
   background-color: #777;
 }
 .dancer {
-  border: 10px solid white;
+  background-image: url("http://file3.instiz.net/data/cached_img/upload/2019/08/06/12/b4dac7cbc93b8bfe4dac26b6b78e3d6e_mp4.gif");
+  position: absolute;
+  /* max-width: 100%;
+  max-height: 100%; */
+}
+.dancer:hover {
+  top: 40px;
+  left: 60px;
+}
+
+.newdancer {
+  border: 10px solid black;
   border-radius: 10px;
   position: absolute;
 }

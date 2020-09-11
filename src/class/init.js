@@ -18,7 +18,29 @@ function handleClickDancerButton() {
   document.body.appendChild(dancer.$node);
 }
 
+function handleClickDancerButton1() {
+  /* makeBlinkyDancer is the dancer maker functions available in global scope.
+   * A new object of the given type will be created and added
+   * to the stage.
+   */
+
+  // make a dancer with a random position
+  //
+  // TODO:
+  let dancer = new BlinkyDancerClass(
+    document.body.clientHeight * Math.random(),
+    document.body.clientWidth * Math.random(),
+    Math.random() * 1000
+  );
+  document.body.appendChild(dancer.$node1);
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   const elAddDancerButton = document.querySelector(".addDancerButton");
   elAddDancerButton.addEventListener("click", handleClickDancerButton);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const elAddDancerButton = document.querySelector(".addNewDancerButton");
+  elAddDancerButton.addEventListener("click", handleClickDancerButton1);
 });
