@@ -8,27 +8,26 @@ if (typeof window === "undefined") {
 // 참고로, constructor는 대문자로 이름을 시작하는 것이 관례입니다
 function Dancer(top, left, time) {
   // your code here
-  this.top = top;
-  this.left = left;
+  const createDancerElement = function() {
+    let elDancer = document.createElement("span");
+    elDancer.className = "dancer";
+    return elDancer;
+  };
+
   this.time = time;
+  this.$node = createDancerElement();
+  this.step();
+  this.setPosition(top, left);
 }
 
-let createDancerElement = function() {
-  let elDancer = document.createElement("span");
-  elDancer.className = "dancer";
-  return elDancer;
-};
-
-Dancer.prototype.$node = createDancerElement();
-
 Dancer.prototype.step = function() {
-  setTimeout(Dancer.step, this.time);
+  setTimeout(this.step.bind(this), this.time);
 };
 
-Dancer.prototype.setPosition = function() {
+Dancer.prototype.setPosition = function(top, left) {
   Object.assign(this.$node.style, {
-    top: `${this.top}px`,
-    left: `${this.left}px`
+    top: `${top}px`,
+    left: `${left}px`
   });
 };
 

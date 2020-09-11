@@ -4,18 +4,21 @@ if (typeof window === "undefined") {
 
 // blinkyDancer를 pseudoclassical한 방식으로 리팩토링하세요
 // 참고로, constructor는 대문자로 이름을 시작하는 것이 관례입니다
-function BlinkyDancer(top, left, time) {
+function BlinkyDancer(...args) {
   // your code here
-  Dancer.apply(this, [top, left, time]);
+  Dancer.apply(this, args);
 }
+// function BlinkyDancer(top, left, time) {
+//   // your code here
+//   Dancer.apply(this, [top, left, time]);
+// }
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 
 BlinkyDancer.prototype.step = function() {
   Dancer.prototype.step.apply(this);
-  // let style = BlinkyDancer.prototype.setPosition;
 
-  let style = BlinkyDancer.$node.style;
+  let style = this.$node.style;
   style.display = style.display === "none" ? "inline-block" : "none";
 };
 
