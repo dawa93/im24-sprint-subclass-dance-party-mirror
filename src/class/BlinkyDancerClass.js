@@ -18,7 +18,7 @@ class BlinkyDancerClass extends DancerClass {
 
   step1() {
     super.step1();
-
+    //
     let style = this.$node1.style;
     style.display = style.display === "none" ? "inline-block" : "none";
   }
