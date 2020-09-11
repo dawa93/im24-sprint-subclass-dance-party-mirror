@@ -5,6 +5,7 @@ html {
 body {
   margin: 0px;
   background-color: #444;
+  /* background-image: url("https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.nba.com%2Fscores&psig=AOvVaw0LZTheYbRH7lXRE0WfNYXl&ust=1599789549703000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPju69K-3esCFQAAAAAdAAAAABBd"); */
   font-size: 18px;
 }
 body,
@@ -26,7 +27,7 @@ a:active {
   background-color: #777;
 }
 .dancer {
-  border: 10px solid red;
+  border: 10px solid white;
   border-radius: 10px;
   position: absolute;
 }
