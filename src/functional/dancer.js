@@ -1,7 +1,7 @@
-if (typeof window === 'undefined') {
-  var jsdom = require('jsdom');
+if (typeof window === "undefined") {
+  var jsdom = require("jsdom");
   var { JSDOM } = jsdom;
-  var { document } = (new JSDOM('')).window;
+  var { document } = new JSDOM("").window;
 } // you don't have to worry about this code. this is for testing.
 
 // Creates and returns a new dancer object that can step
@@ -9,8 +9,8 @@ var makeDancer = (top, left, timeBetweenSteps) => {
   const dancer = {};
 
   const createDancerElement = () => {
-    let elDancer = document.createElement('span');
-    elDancer.className = 'dancer';
+    let elDancer = document.createElement("span");
+    elDancer.className = "dancer";
     return elDancer;
   };
 
@@ -39,6 +39,6 @@ var makeDancer = (top, left, timeBetweenSteps) => {
 };
 
 // you don't have to worry about this code. this is for testing.
-if (typeof window === 'undefined') {
+if (typeof window === "undefined") {
   module.exports = makeDancer;
 }
