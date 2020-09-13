@@ -6,6 +6,9 @@ body {
   margin: 0px;
   background: grey;
   font-size: 18px;
+  background-image: url("https://d2r55xnwy6nx47.cloudfront.net/uploads/2020/03/UniverseShape_LedeFullWidth.jpg");
+  background-repeat: no-repeat;
+  background-size: 2700px 1400px;
 }
 body,
 a:link,
@@ -18,6 +21,10 @@ a:active {
   padding: 5px 12px;
   float: right;
 }
+.addNewDancerButton {
+  padding: 5px 12px;
+  float: right;
+}
 .topbar {
   height: 32px;
   background-color: #555;
@@ -25,19 +32,36 @@ a:active {
 .title {
   background-color: #777;
 }
-.dancer {
-  background-image: url("http://file3.instiz.net/data/cached_img/upload/2019/08/06/12/b4dac7cbc93b8bfe4dac26b6b78e3d6e_mp4.gif");
+/* .dancer {
+  background-image: url("/img/star.png");
+  content: url("https://banner2.cleanpng.com/20180205/dhe/kisspng-line-symmetry-angle-white-pattern-christmas-gold-star-png-image-5a789167ae57e8.0797758215178509837141.jpg");
   position: absolute;
-  /* max-width: 100%;
-  max-height: 100%; */
+  height: 100%;
+  width: 100%;
+} */
+.dancer {
+  border: 10px solid red;
+  border-radius: 10px;
+  position: absolute;
 }
 .dancer:hover {
   top: 40px;
   left: 60px;
 }
 
+/* .newdancer {
+  background-image: url("https://pngimg.com/uploads/football/football_PNG52781.png");
+  height: 150px;
+  width: 150px;
+  position: absolute;
+} */
+
 .newdancer {
-  border: 10px solid black;
+  border: 10px solid blue;
   border-radius: 10px;
   position: absolute;
+}
+.lineUp {
+  padding: 5px 12px;
+  float: right;
 }

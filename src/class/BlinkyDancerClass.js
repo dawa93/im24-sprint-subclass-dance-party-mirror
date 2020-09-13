@@ -14,12 +14,14 @@ class BlinkyDancerClass extends DancerClass {
 
     let style = this.$node.style;
     style.display = style.display === "none" ? "inline-block" : "none";
+    // move(left){
+    //     Object.assign(this.$node.style, {left: `${left}px - 5px`}
+    // }
   }
-
-  step1() {
-    super.step1();
+  step2() {
+    super.step2();
     //
-    let style = this.$node1.style;
+    let style = this.$node2.style;
     style.display = style.display === "none" ? "inline-block" : "none";
   }
 }
